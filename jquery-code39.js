@@ -1,5 +1,7 @@
 /*	##### jquery-code39.js #####
 
+    v.2 - 6/10/14
+
 	This is free and unencumbered software released into the public domain.
 
 	Anyone is free to copy, modify, publish, use, compile, sell, or
@@ -112,7 +114,7 @@
         var drawCode = function(context, codeChar) {
             // Get the sequence of wide, narrow, black, and white bar chars for this char
             // Will be a sequence of B, b, W, & w, from the charTable
-            
+
             // Fail if 
             if (!charTable.hasOwnProperty(codeChar)) {
                 throw new Error("Unsupported character given to code39 writer: " + codeChar);
@@ -151,7 +153,7 @@
                     break;
                 default:
                     throw new Error("Invalid typeChar given to drawBar: " + typeChar);
-                    break;    
+                    break;
             }
 
             context.fillStyle = fillCode;
@@ -192,7 +194,7 @@
         // Thus, the overall number of small-bar's worth of columns printed is
         // = (12 narrows per char) * (#chars to print, including "*"s) + (#chars-1, for seperator 'w's)
         // =          12           *       [dataString length + 2]     +   [dataString length + 2 - 1]
-        var narrowBarCount = 12 * (dataString.length + 2) + (dataString.length + 2 - 1);
+        var narrowBarCount = 12 * (dataString.length + 2) + (dataString.length + 2 - 1) * 2;
 
         // How many narrow bars we can fit in the image
         narrowWidth = Math.round(cWidth / narrowBarCount);

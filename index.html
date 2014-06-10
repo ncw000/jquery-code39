@@ -2,12 +2,12 @@
 	<head>
 		<title>Test barcode generation</title>
 		<script type="text/javascript" src="http://jqueryjs.googlecode.com/files/jquery-1.3.2.js"></script>
-		<script type="text/javascript" src="code39.js"></script>
+		<script type="text/javascript" src="jquery-code39.js"></script>
 	</head>
-	<body>
-		<canvas id="barcodeCanvas" style="margin:100px" width="1000" height="50"></canvas>
+	<body style="background:#DDDDDD">
+		<canvas id="barcodeCanvas" style="margin:100px" width="1054" height="100"></canvas>
 		<script>
-		$("#barcodeCanvas").code39("12345");
+		$("#barcodeCanvas").code39("577");
 		</script>
 	</body>
 </html>

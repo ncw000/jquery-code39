@@ -4,7 +4,7 @@ jquery-code39
 
 Install
 -------
-It's just a .js, don't be stupid. Include the source and go to town!
+It's just a .js, don't be silly. Include the source and go to town!
 
 Usage
 -----
